@@ -11,3 +11,17 @@ r = request.get(url)
 
 #turn the html in beautifulsoup object
 soup = beautifulsoup(r.text,"lxml")
+
+#create a variable to store scrapped data
+charater_name=[]
+
+#first level scrapping
+for iteam in soup.find_all('li',{'class':'toclevel-2'})[;,-3]:
+  #find each span with clas=toctext
+  for post in iteam.find_all('span',{'class':'toclevel'}):
+    #add all to charater_namr, one by one
+    character_name.append(post.string.strip())
+    
+#view character_name
+character_name
+
