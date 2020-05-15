@@ -1,0 +1,13 @@
+#import requird modules
+import requests
+from bs4 import beautifulsoup
+import pandas as pd
+
+#create a variable with url
+url = ''
+
+#scrape the html at url
+r = request.get(url)
+
+#turn the html in beautifulsoup object
+soup = beautifulsoup(r.text,"lxml")
